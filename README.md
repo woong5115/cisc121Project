@@ -1,9 +1,13 @@
 # cisc121Project
+
+I choose to do Binary search.
+
 Why I Chose Binary Search
 
 I selected Binary Search because it is one of the most efficient and foundational searching algorithms in computer science. Unlike linear search, which checks every element one by one, binary search repeatedly divides the search interval in half. This makes it significantly faster, especially for large datasets, with a time complexity of O(log n).
 
 Binary search is also ideal for visualization because you can clearly show the algorithm narrowing down the search range step-by-step (left, right, mid). This makes it an excellent algorithm to demonstrate in an interactive Python application, fulfilling the teaching-oriented goals of this project.
+
 
 Problem Breakdown & Computational Thinking
 1. Decomposition
@@ -34,7 +38,7 @@ Breaking the problem this way makes it easier to implement, test, and visualize.
 
 2. Pattern Recognition
 
-Binary Search uses a repeated pattern:
+Binary Search uses a repeated pattern
 
 Look at the middle of a list.
 
@@ -48,11 +52,11 @@ This repeated halving of the search interval is the core pattern that makes bina
 
 3. Abstraction
 
-To make the app simple for users:
+To make the app simple for users
 
-The user only enters two things:
-✔ A sorted list
-✔ A target number
+The user only enters two things
+ A sorted list
+ A target number
 
 All internal algorithm details (mid index, half selection, comparisons) are hidden from the user until displayed as easy-to-read text steps.
 
@@ -94,10 +98,13 @@ Record each step for the user
 
 Output:
 
-A step-by-step explanation of the binary search process
+A step by step explanation of the binary search process
 
 A final message stating whether the target was found or not
 
 This output is displayed in a Gradio textbox
 
 This flow ensures the algorithm is both correct and easy to understand.
+
+Author 
+Andrew Oh
