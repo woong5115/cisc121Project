@@ -1,110 +1,121 @@
 # cisc121Project
 
-I choose to do Binary search.
+# Algorithm Name
+Binary Search Simulator 
 
-Why I Chose Binary Search
+## Demo video/gif/screenshot of test
 
-I selected Binary Search because it is one of the most efficient and foundational searching algorithms in computer science. Unlike linear search, which checks every element one by one, binary search repeatedly divides the search interval in half. This makes it significantly faster, especially for large datasets, with a time complexity of O(log n).
-
-Binary search is also ideal for visualization because you can clearly show the algorithm narrowing down the search range step-by-step (left, right, mid). This makes it an excellent algorithm to demonstrate in an interactive Python application, fulfilling the teaching-oriented goals of this project.
+uploaded via OnQ
 
 
-Problem Breakdown & Computational Thinking
+## Problem Breakdown & Computational Thinking (You can add a flowchart , write the four pillars of computational thinking briefly in bullets, etc.)
+
+This project implements Binary Search, a classic searching algorithm used to efficiently find a target value in a sorted list. It runs in O(log n) time by repeatedly dividing the search interval in half.
+
 1. Decomposition
 
-Binary Search can be broken down into small steps:
+Binary Search can be broken down into the following steps:
 
-Take user input (a sorted list + a target number).
+Take a sorted list and a target value.
 
-Validate inputs to ensure the list is sorted and numeric.
+Start with two pointers: left at the start, right at the end.
 
-Set the initial search boundaries (left and right).
+Repeatedly choose the midpoint index mid = (left + right) // 2.
 
-Repeatedly calculate the middle index (mid).
+Compare the middle value with the target:
 
-Compare the middle value with the target.
+If equal → found.
 
-If equal → return the result.
+If smaller → search the right half.
 
-If the middle value is too small → search the right half.
+If larger → search the left half.
 
-If too large → search the left half.
+Stop when left > right.
 
-If the range becomes invalid → conclude the target is not found.
+My program also:
 
-Display all steps back to the user.
+Checks if the list is sorted.
 
-Breaking the problem this way makes it easier to implement, test, and visualize.
+Finds all duplicate occurrences of the target.
 
 2. Pattern Recognition
 
-Binary Search uses a repeated pattern
+Binary Search repeatedly:
 
-Look at the middle of a list.
+Divides the list in half.
 
-Decide whether the target is to the left or right.
-
-Narrow the search to that half.
-
-Repeat this pattern until the value is found or the search ends.
-
-This repeated halving of the search interval is the core pattern that makes binary search efficient.
+Compares the target to the middle element.
+This repeated “halving” pattern is what makes binary search extremely efficient.
 
 3. Abstraction
 
-To make the app simple for users
+To keep the app simple for beginners:
 
-The user only enters two things
- A sorted list
- A target number
+Users only need to enter a sorted, comma-separated list.
 
-All internal algorithm details (mid index, half selection, comparisons) are hidden from the user until displayed as easy-to-read text steps.
+The internal logic (midpoint calculation, pointer adjustments, duplicate scanning) is abstracted away.
 
-The app abstracts away:
+Output shows each step in plain English to help users learn the algorithm.
 
-Memory management
-
-Loop mechanics
-
-Index calculations
-
-Error handling
-
-Users only see a clear explanation of each step, making the algorithm easy to learn.
-
-4. Algorithm Design (Input → Processing → Output)
+4. Algorithm Design (Flow)
 
 Input:
+Sorted list of integers, target integer.
 
-A sorted list of integers (e.g., 1, 3, 4, 7, 9)
+Process:
 
-A target integer (e.g., 7)
+Validate inputs
 
-Processing:
+Check sorting
 
-Convert input into integers
+Perform binary search
 
-Check if the list is sorted
+Scan left/right for duplicates
 
-Perform binary search:
-
-Calculate mid
-
-Compare mid value to target
-
-Adjust left/right boundaries
-
-Record each step for the user
+Generate step-by-step explanation
 
 Output:
+A clear, line-by-line explanation of the binary search process.
 
-A step by step explanation of the binary search process
+Algorithm & Code Explanation
 
-A final message stating whether the target was found or not
+My implementation includes:
 
-This output is displayed in a Gradio textbox
+Input validation
 
-This flow ensures the algorithm is both correct and easy to understand.
+A helper function is_sorted()
 
-Author 
+A fully step-by-step interactive binary search
+
+Duplicate detection
+
+A Gradio-based user interface
+
+## Steps to Run
+1. go to the hugface app and find andrew543/cisc121Project from spaces or follow the link below.
+
+2. put sorted array. comma will seperate each element of array.
+
+3. put the number you want to find
+
+4. result will pop up right side.
+
+
+
+Hugging Face Link
+
+https://huggingface.co/spaces/andrew543/cisc121Project
+
+
+
+ Author
+
 Andrew Oh
+
+Acknowledgments
+
+Gradio documentation
+
+Course lecture notes on searching algorithms
+
+Hugging Face Spaces deployment guide
